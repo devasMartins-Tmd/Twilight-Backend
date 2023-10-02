@@ -40,7 +40,7 @@ export const makeAPostFunction = async (req: Request, res: Response) => {
    if (id && user) {
       if (req.body.img) {
          let buffer: Buffer = Buffer.from(req.body.img.split(';base64,')[1], 'base64');
-         let fileName = `IMG/${user.name}.${Math.floor(Math.random() * 100)}.profile.webp`.replace(' ', '');
+         let fileName = `IMG/${user.name}.${Math.floor(Math.random() * 100)}.post.webp`.replace(' ', '');
          path.writeFileSync(fileName, buffer);
          let isDone = fileExist(fileName);
          if (isDone) {
