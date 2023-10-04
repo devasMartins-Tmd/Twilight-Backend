@@ -8,9 +8,9 @@ import { postAPostComment, makeAPostFunction } from '../controllers/post';
 
 //configuration
 cloudinary.v2.config({
-  cloud_name: 'dmaag3pvx',
-  api_key: '361131622249287',
-  api_secret: 'YuAFR9ivjfuP0nHfQ1SkJXWJDZ4',
+   cloud_name: 'dmaag3pvx',
+   api_key: process.env.CLOUDINARY_KEY,
+   api_secret: process.env.CLOUDINARY_SECRET,
 });
 
 const fnPost = express.Router();
