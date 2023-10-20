@@ -6,9 +6,7 @@
   "scripts": {
     "start": "node index.ts",
     "dev": "nodemon index.ts",
-    "build": "npm install",
-    "testOne": "mocha ^[0-9a-zA-Z].test.js",
-    "testAll": "mocha [0-9a-zA-Z]"
+    "build": "npm install"
   },
   "keywords": [],
   "author": "",
