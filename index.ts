@@ -19,7 +19,7 @@ App.use(
 App.use(express.json({ limit: '300mb' }));
 App.use(express.urlencoded({ extended: true }));
 App.use(express.static(path.join(__dirname, '/dist')));
-App.set('port', 8505);
+App.set('port', 8503);
 
 //routes
 App.use('/', require('./route/authRoute'));
