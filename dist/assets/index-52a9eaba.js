@@ -10288,7 +10288,7 @@ function r1() {}
 async function wm(e, t) {
    return await (await fetch(e, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(t) })).json();
 }
-let Q = 'https://localhost:8505';
+let Q = 'http://localhost:8505';
 const Sm = () => {
       let { setAuthPage: e } = w.useContext(yo),
          [t, n] = w.useState({ name: '', email: '', password: '' });
