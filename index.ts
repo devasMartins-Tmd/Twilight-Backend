@@ -1,10 +1,11 @@
 import express from 'express';
 import cors from 'cors';
 import color from 'colors';
-import * as serverless from 'serverless-http';
 import * as path from 'path';
+import { connectToDB } from './config/db_connect';
+import { configDotenv } from 'dotenv';
 
-const connectToDB = require('./config/db_connect');
+configDotenv({ path: './config/.env' });
 
 const App = express();
 
@@ -31,5 +32,3 @@ App.use('/', require('./route/userRoute'));
 connectToDB().then(() => {
    App.listen(App.get('port'), () => console.log(color.green(`App listening on port ${App.get('port')}`)));
 });
-
-module.exports = serverless.default(App);
