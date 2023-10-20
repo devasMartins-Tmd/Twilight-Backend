@@ -1,12 +1,14 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "description": "",
+  "description": "Backend for my Twilight APP",
   "main": "index.ts",
   "scripts": {
-    "start": "node index.ts",
+   "start": "node index.ts",
     "dev": "nodemon index.ts",
-    "build": "npm install"
+    "build": "npm install",
+    "testOne": "mocha ^[0-9a-zA-Z].test.js",
+    "testAll": "mocha [0-9a-zA-Z]"
   },
   "keywords": [],
   "author": "",
@@ -28,9 +30,7 @@
     "graphql": "^15.8.0",
     "jsonwebtoken": "^9.0.0",
     "mongoose": "^7.4.5",
-    "netlify-lambda": "^2.0.16",
     "request": "^2.88.2",
-    "serverless-http": "^3.2.0",
     "ts-node": "^10.9.1"
   },
   "devDependencies": {
@@ -48,6 +48,7 @@
     "nodemon": "^2.0.22",
     "sequelize": "^6.32.1",
     "sinon": "^16.0.0",
-    "sqlite3": "^5.1.6"
+    "sqlite3": "^5.1.6",
+    "typescript": "^5.2.2"
   }
 }
